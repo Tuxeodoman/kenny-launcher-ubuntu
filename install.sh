@@ -2,8 +2,8 @@
 set -euo pipefail
 readonly version='9.6.1-dev'
 readonly asset="kenny-launcher-${version}-ubuntu-x86_64.tar.xz"
-readonly base='https://github.com/Tuxeodoman/kenny-launcher-ubuntu/releases/download/v9.6.1-dev-ubuntu'
-readonly expected='ea5c0239042998a6a11f470ce319e53348c2f99b3be42f3a81ae31420658db67'
+readonly base='https://github.com/Tuxeodoman/kenny-launcher-ubuntu/releases/download/v9.6.1-dev-ubuntu-r1'
+readonly expected='626a2b98bfc61b55ee4262cadb4ae5c02d3f79acba750707c3f3280a47aa1f4b'
 die() { printf '%s\n' "$*" >&2; exit 1; }
 [[ $(uname -s) == Linux && $(uname -m) == x86_64 ]] || die 'Нужен Ubuntu x86_64 или совместимый дистрибутив.'
 [[ $EUID -ne 0 ]] || die 'Запустите bash install.sh без sudo.'
@@ -18,7 +18,7 @@ if [[ $# == 1 ]]; then
     [[ -f "$archive" ]] || die "Нет архива: $archive"
 else
     command -v curl >/dev/null || die 'Сначала установите curl: sudo apt install curl'
-    cache="${XDG_CACHE_HOME:-$HOME/.cache}/kenny-launcher-ubuntu/$version"
+    cache="${XDG_CACHE_HOME:-$HOME/.cache}/kenny-launcher-ubuntu/$version-$expected"
     mkdir -p -- "$cache"
     archive="$cache/$asset"
     if [[ ! -f "$archive" ]]; then

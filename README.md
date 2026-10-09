@@ -5,7 +5,7 @@
 Установка из терминала обычного пользователя:
 
 ```bash
-curl -fLO https://github.com/Tuxeodoman/kenny-launcher-ubuntu/releases/download/v9.6.1-dev-ubuntu/install.sh
+curl -fLO https://github.com/Tuxeodoman/kenny-launcher-ubuntu/releases/download/v9.6.1-dev-ubuntu-r1/install.sh
 bash install.sh
 ```
 
