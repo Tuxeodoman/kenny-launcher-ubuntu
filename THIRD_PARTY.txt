@@ -1,25 +1,43 @@
-The package includes Qt 6.11.2, Eclipse Temurin OpenJDK 8/17/21/25,
-7-Zip, authlib-injector and shared libraries from Ubuntu 24.04.
+Kenny Launcher 1.0.13 Linux x86_64
 
-Qt license texts are in licenses/Qt inside the archive. Qt is dynamically
-linked; its libraries can be replaced in lib/, plugins/ and qml/.
-Corresponding Qt source code for version 6.11.2:
-https://download.qt.io/official_releases/qt/6.11/6.11.2/single/
-https://github.com/qt/qtbase/tree/v6.11.2
-https://github.com/qt/qtdeclarative/tree/v6.11.2
-https://github.com/qt/qtsvg/tree/v6.11.2
-https://github.com/qt/qtimageformats/tree/v6.11.2
-https://github.com/qt/qtwayland/tree/v6.11.2
-https://github.com/qt/qtshadertools/tree/v6.11.2
+Application binaries, Qt libraries and plugins come unchanged from the verified
+KennyLauncher_1.0.13_linux.zip built on Ubuntu 22.04 (source commit 9384363).
+The launcher executable is named .KennyLauncher.bin; KennyLauncher is the
+distribution wrapper. It selects bundled Java and disables the upstream updater.
 
-Java licenses and notices are preserved under java/<version>/legal or
-java/<version>/LICENSE and THIRDPARTYLICENSEREADME.txt. Exact versions,
-original downloads and SHA-256 checksums are in runtimes.json.
+Qt 6.11.1 is dynamically linked. Replaceable libraries/plugins are in lib/,
+plugins/ and qml/. Exact upstream license texts for Qt 6.11.1 are in licenses/Qt.
+Corresponding Qt sources:
+https://download.qt.io/official_releases/qt/6.11/6.11.1/single/
+https://github.com/qt/qtbase/tree/v6.11.1
+https://github.com/qt/qtdeclarative/tree/v6.11.1
+https://github.com/qt/qtsvg/tree/v6.11.1
+https://github.com/qt/qtimageformats/tree/v6.11.1
+https://github.com/qt/qtwayland/tree/v6.11.1
+https://github.com/qt/qtshadertools/tree/v6.11.1
+https://github.com/qt/qtwebsockets/tree/v6.11.1
+https://github.com/qt/qttasktree/tree/v6.11.1
+
+Ubuntu 22.04 dependency copyright notices are in licenses/ubuntu-22.04.
+These notices are retrieved from official Jammy source or binary packages;
+licenses/SOURCES.json records their original package versions, URLs and hashes.
+ICU 73.2 supplied with Qt: licenses/ICU/LICENSE.
+
+Eclipse Temurin Java 8/17/21/25 and 7zz are byte-preserved from the previous
+v9.6.1-dev-ubuntu-r1 distribution. Java versions, original download URLs and
+source archive checksums remain in runtimes.json. Java license texts, legal
+symlinks and notices are preserved inside java/<version>/.
 https://github.com/adoptium/temurin8-binaries
 https://github.com/adoptium/temurin17-binaries
 https://github.com/adoptium/temurin21-binaries
 https://github.com/adoptium/temurin25-binaries
 
 7-Zip: 7zip-License.txt; https://www.7-zip.org/
+Phantom: licenses/Phantom/LICENSE.txt
+Asio, nlohmann-json, fmt and spdlog: licenses/ubuntu-22.04.
+picojson: licenses/picojson/LICENSE
 authlib-injector: https://github.com/yushijinhun/authlib-injector
-Ubuntu dependency copyright notices: licenses/ubuntu/ in the archive.
+
+No Linux launcher/game execution or virtual-machine tests were performed for
+this release. Archive integrity, source bytes, permissions, safe links and ELF
+requirements were checked statically.
